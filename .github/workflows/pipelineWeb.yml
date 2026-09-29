@@ -45,6 +45,7 @@ jobs:
         uses: actions/deploy-pages@v5
 
   Docker:
+    needs: validar
     runs-on: ubuntu-latest
     steps:
       - name: Docker Login
