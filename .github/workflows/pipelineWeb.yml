@@ -53,4 +53,14 @@ jobs:
         with:
           username: ${{secrets.DOCKER_USER}}
           password: ${{secrets.DOCKER_SENHA}}
-   
+      - name: Publicar imagem  
+
+        uses: docker/build-push-action@v7.4.0
+        with:
+          
+          file: dockerfile
+          
+          push: true
+          
+          tags: luiznando08/img_pantera:1.0
+          
